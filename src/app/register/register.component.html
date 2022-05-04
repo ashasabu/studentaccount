@@ -1,0 +1,73 @@
+<nav class="navbar navbar-light bg-dark " >
+    <a class="navbar-brand  " href="#" style="color:rgb(85, 98, 237);"><b>&#169; HAFC Bank Pvt.Ltd </b></a>
+ <span class="quote text-light">Welcome</span>
+   <h4 style="color: white;">Here us </h4>
+  </nav>
+  <div class="container col-md-12 mt-0">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3 appHighlight class="text-center">Sign Up</h3>
+				
+			</div>
+			<div class="card-body">
+				<form [formGroup]="registerForm" (ngSubmit)="register()">
+                    <div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<!-- <input type="text" class="form-control" #acno [placeholder]="accnum" id="login_accno" required> -->
+						<!-- (change)="accno($event)" -->
+						<input type="text" name="studentid" formControlName="studentid" class="form-control"  placeholder="Student Id" id="login_username" required>
+					</div>
+					<div *ngIf="this.registerForm.get('studentid')?.touched&&this.registerForm.get('studentid')?.errors" style="color: red;">
+                        Invalid studentid
+                    </div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<!-- <input type="text" class="form-control" #acno [placeholder]="accnum" id="login_accno" required> -->
+						<!-- (change)="accno($event)" -->
+						<input type="text" name="studentname" formControlName="studentname" class="form-control"  placeholder="studentname" id="login_accno" required>
+					</div>
+					<div *ngIf="this.registerForm.get('studentname')?.touched&&this.registerForm.get('studentname')?.errors" style="color: red;">
+                        Invalid studentname
+                    </div>
+
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input type="password" name="pswd" formControlName="password" class="form-control" placeholder="password" id="login_password" required>
+						<!-- <input type="password" #pswd class="form-control" placeholder="password" id="login_password" required> -->
+						<!-- (change)="pswd($event)" -->
+					</div>
+					<div *ngIf="this.registerForm.get('password')?.touched&&this.registerForm.get('password')?.errors" style="color: red;">
+                        Invalid password
+                    </div>
+				<!-- //phone number -->
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-phone"></i></span>
+						</div>
+						
+						<input type="text" name="mobileno" formControlName="mobileno" class="form-control"  placeholder="Mobile No" id="login_accno" required>
+					</div>
+					<div *ngIf="this.registerForm.get('mobileno')?.touched&&this.registerForm.get('mobileno')?.errors" style="color: red;">
+                        Invalid mobileNo
+                    </div>
+				
+				
+				
+					
+					<div class="form-group">
+						<input type="submit" (click)="register()"  value="register" class="btn float-right login_btn " style="width:50%" >
+					</div>
+				</form>
+			</div>
+			<p style="color:rgb(231, 231, 231);align-items:baseline;">Existing User? <a href="" routerLink="">Log In </a></p>
+		</div>
+	</div>
+</div>
+

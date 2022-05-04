@@ -1,0 +1,37 @@
+
+<nav class="navbar navbar-light bg-dark " >
+    <a class="navbar-brand  " href="#" style="color:rgb(85, 98, 237);"><b>&#169; ABC School </b></a>
+<button style="float: right;" class="btn btn-warning" (click)="logout()">LogOut</button>
+
+
+</nav>
+<div class="container" style="text-align: center;">
+    <br><br><br>
+    
+        <a class="examregister" href="" routerLink="examregister">Registration</a><br><br>
+
+        <a class="dashboard"href="" routerLink="register">Exam Result</a><br><br>
+        <a class="dashboard"href="" routerLink="register">History</a><br><br>
+
+   
+    
+    <!-- student details -->
+    <div>
+        <table class="table" style="color: white;">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Mobile No</th>
+                    <th>Student Id</th>
+                </tr>
+            </thead>
+            <tbody >
+               <tr>
+                   <td>{{name}}</td>
+                   <td>{{no}}</td>
+                   <td>{{id}}</td>
+               </tr>
+            </tbody>
+         </table>
+    </div>
+</div>
